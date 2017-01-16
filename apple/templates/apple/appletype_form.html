@@ -1,0 +1,23 @@
+{% extends 'apple/base.html' %}
+
+{% block content %}
+
+    <div class="col-lg-4 col-lg-offset-2">
+        <div class="row text-center">
+            <br>
+            <h3 style="color: black">Add an Apple:</h3>
+            <form style="color: black" class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% include 'apple/form-template.html' %}
+                <div class="form-group">
+                    <div class="cols-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </div>
+                </div>
+            </form>
+            <br>
+        </div>
+    </div>
+
+{% endblock %}
+

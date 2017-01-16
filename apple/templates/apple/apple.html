@@ -1,0 +1,40 @@
+{% extends 'apple/base.html' %}
+
+{% block content %}
+    <section id="services">
+        <div class="row text-center">
+
+
+            <h2>Different kind of apples</h2>
+            <hr class="small">
+            <div class="row">
+                {% for apple in all_apples %}
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                    <a href="{{ apple.id }}/">
+                                        {% load static %}
+                                        <img class="img-circle" src="{% static "apple/images/apple1.jpg" %}"
+                                             alt="image not available">
+                                    </a>
+                                </span>
+                            <h4>
+                                <strong>{{ apple.apple_name }}</strong>
+                            </h4>
+                            <br>
+                        </div>
+                    </div>
+                {% endfor %}
+
+
+            </div>
+        </div>
+
+        <!-- /.container -->
+    </section>
+
+
+{% endblock %}
+
+
+

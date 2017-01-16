@@ -1,0 +1,23 @@
+{% extends 'apple/base.html' %}
+
+{% block content %}
+    <!-- Blog Entries Column -->
+    <div class="col-md-8">
+
+        <!-- Generate Blog Posts for recipes -->
+        {% for recipe in all_recipes %}
+            <hr>
+
+            <h1 class="brand-name">{{ recipe.title }}</h1>
+            <p class="lead">
+                by {{ recipe.author }}
+            </p>
+            <hr>
+            <img class="img-responsive" src="{{ recipe.picture.url }}" alt="image not available">
+            <hr>
+            <p>{{ recipe.ingredients }}</p>
+            <p>{{ recipe.steps }}</p>
+        {% endfor %}
+    </div>
+
+{% endblock %}

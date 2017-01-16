@@ -1,0 +1,23 @@
+{% extends 'apple/base.html' %}
+
+{% block content %}
+    <div class="row">
+
+
+        <div class="col-md-4" style="margin: auto; text-align: center">
+            <h1 style="color: whitesmoke; font-size: 40px"
+                class="lead brand-name">{{ apple.apple_name }}</h1>
+            <div style="color: black" class="list-group">
+                <p class="list-group-item"><b>Best for direct consumption:&nbsp</b>{{ apple.eating }}</p>
+                <p class="list-group-item"><b>Good for sauce:&nbsp</b>{{ apple.sauce }}</p>
+                <p class="list-group-item"><b>Good for pie:&nbsp</b>{{ apple.pie }}</p>
+                <p class="list-group-item"><b>Good for juice:&nbsp</b>{{ apple.juice }}</p>
+                <p class="list-group-item"><b>Good for butter:&nbsp</b>{{ apple.butter }}</p>
+                <p class="list-group-item"><b>Good for cooking:&nbsp</b>{{ apple.cooking }}</p>
+                <p class="list-group-item"><b>Ripening Date:&nbsp</b>{{ apple.ripening_date }}</p>
+                <p class="list-group-item"><b>Notes:&nbsp</b>{{ apple.notes }}</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
